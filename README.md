@@ -1,4 +1,4 @@
-# PID制御をROS2を使ってUnity上でシミュレーション
+# オムニホイールのシミュレーション
 ## 必要なソフトウェア
 次の環境で動作確認ができました
 - Ubuntu 22.04.4 LTS
@@ -13,7 +13,7 @@ https://note.com/oki0808/n/ne81bf0f37b78
 こちらにあるSimCore.unitypackageをUnity内にimportしてください
 https://github.com/TakanoTaiga/template_ros2unity/releases/tag/UP-1.0
 #### オブジェクトのセット
-Hierarchy内に`SimCore/Demo`を追加し、+ボタンからCreateEmptyでPublisherという名前のオブジェクトを作ってください(名前は何でも良い)
+Hierarchy内に`SimCore/Demo`を追加し、+ボタンからCreateEmptyでPublisher,Subscriberという名前の空のオブジェクトと地面用のTerrainを作ってください(名前は何でも良い)
 下のようになるはずです
 (写真)
 ここで上の写真のようにGlue-1のInspectorを開いてRigidbodyのFreezeRotationのx,zに対してチェックを入れます(こうしないと発進、停止時の挙動がすごくおかしくなる)
@@ -172,4 +172,17 @@ public class MySubscriber : MonoBehaviour
 
 }
 ```
+このスクリプトをそれぞれの空のオブジェクトにアタッチしてください
+すると写真のようにになるのでmoto_joint1からjointを選んでください(ここで注意なのが全部同じ名前なのでmoto_joint<>の数字と、jointがの上のディレクトリにあるomni100mm_lite-<>の数字が一致するようにしてください3日溶けました)
+(写真)
+## シミュレーションの開始
+ターミナル上で次の２つを実行(ビルドを行ってから実行してください)
+```
+ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0
+```
+```
+ros2 run pid_omni omni_pid_controller
+```
+Unityでシーンを起動します 成功したら次のようになるはずです
+(動画のURL)
 
