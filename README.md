@@ -15,12 +15,12 @@ https://github.com/TakanoTaiga/template_ros2unity/releases/tag/UP-1.0
 #### オブジェクトのセット
 Hierarchy内に`SimCore/Demo`を追加し、+ボタンからCreateEmptyでPublisher,Subscriberという名前の空のオブジェクトと地面用のTerrainを作ってください(名前は何でも良い)
 下のようになるはずです
-(写真)
+![Screenshot from 2024-10-18 13-01-21](https://github.com/user-attachments/assets/fef01611-df82-422f-ac8b-84ff2b274a8f)
 ここで上の写真のようにGlue-1のInspectorを開いてRigidbodyのFreezeRotationのx,zに対してチェックを入れます(こうしないと発進、停止時の挙動がすごくおかしくなる)
 これをGlue-2,3,4にもやってあげます
 #### スクリプトの生成
 `SimCore/Scripts`フォルダーを作り、そこにMyPublisherとMySubscriberという名前のスクリプトを作ってください(一番右は無視してください)
-(写真)
+![Screenshot from 2024-10-18 13-06-49](https://github.com/user-attachments/assets/e3e0cbb6-8f31-429f-95a5-d22b2192c58d)
 各スクリプトに次のコードをペーストしてください
  ```MyPublisher
 using System.Collections;
@@ -174,7 +174,7 @@ public class MySubscriber : MonoBehaviour
 ```
 このスクリプトをそれぞれの空のオブジェクトにアタッチしてください
 すると写真のようにになるのでmoto_joint1からjointを選んでください(ここで注意なのが全部同じ名前なのでmoto_joint<>の数字と、jointがの上のディレクトリにあるomni100mm_lite-<>の数字が一致するようにしてください3日溶けました)
-(写真)
+![Screenshot from 2024-10-18 13-15-17](https://github.com/user-attachments/assets/da21b364-469f-4566-9c11-7f1e2526fa3d)
 ## シミュレーションの開始
 ターミナル上で次の２つを実行(ビルドを行ってから実行してください)
 ```
@@ -184,5 +184,4 @@ ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0
 ros2 run pid_omni omni_pid_controller
 ```
 Unityでシーンを起動します 成功したら次のようになるはずです
-(動画のURL)
-
+https://youtu.be/0jU1YdLFrzw?si=J0aoBV9WCb8mnFkG
