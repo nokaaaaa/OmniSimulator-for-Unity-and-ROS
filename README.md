@@ -113,9 +113,6 @@ public class MySubscriber : MonoBehaviour
     public ArticulationBody moto_joint_3;
     public ArticulationBody moto_joint_4;
 
-    public GameObject robot_body;
-    
-
     private float vx = 0.0f; // Linear velocity in x-direction
     private float vz = 0.0f; // Linear velocity in z-direction
     private float ry = 0.0f; // Yaw angle (in radians)
