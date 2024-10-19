@@ -19,7 +19,7 @@ Hierarchy内に`SimCore/Demo`を追加し、+ボタンからCreateEmptyでPublis
 ここで上の写真のようにGlue-1のInspectorを開いてRigidbodyのFreezeRotationのx,zに対してチェックを入れます(こうしないと発進、停止時の挙動がすごくおかしくなる)
 これをGlue-2,3,4にもやってあげます
 #### スクリプトの生成
-`SimCore/Scripts`フォルダーを作り、そこにMyPublisherとMySubscriberという名前のスクリプトを作ってください(一番右は無視してください)
+`SimCore/Scripts`フォルダー内のRobotというスクリプトを削除して、MyPublisherとMySubscriberという名前のスクリプトを作ってください(一番右は無視してください)
 ![Screenshot from 2024-10-18 13-06-49](https://github.com/user-attachments/assets/e3e0cbb6-8f31-429f-95a5-d22b2192c58d)
 各スクリプトに次のコードをペーストしてください
  ```MyPublisher
