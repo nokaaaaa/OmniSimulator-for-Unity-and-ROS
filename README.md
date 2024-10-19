@@ -168,7 +168,8 @@ public class MySubscriber : MonoBehaviour
 
 }
 ```
-このスクリプトをそれぞれの空のオブジェクトにアタッチしてください Publisherのインスペクターを開いて、targetobjectをbodyにします
+このスクリプトをそれぞれの空のオブジェクトにアタッチしてください Publisherのインスペクターを開いて、targetobjectでbodyを選択します(これもbodyが複数あるが、Demo内の一番上のディレクトリのbodyを選んでください) 
+そして、Demo内のjointのTarget Velocityの値を0にしてください(4つすべて)
 すると写真のようにになるのでmoto_joint1からjointを選んでください(ここで注意なのが全部同じ名前なのでmoto_joint<>の数字と、jointがの上のディレクトリにあるomni100mm_lite-<>の数字が一致するようにしてください3日溶けました)
 ![Screenshot from 2024-10-18 13-15-17](https://github.com/user-attachments/assets/da21b364-469f-4566-9c11-7f1e2526fa3d)
 ※追記 上の写真にあるスクリプトを有効にするかのチェックマークがあるのですが 最初からあるRobotというスクリプト(Demoのインスペクター内にあるやつ）のチェックマークは外してください
