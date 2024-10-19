@@ -115,7 +115,6 @@ public class MySubscriber : MonoBehaviour
 
     public GameObject robot_body;
     
-    public GameObject targetObject;
 
     private float vx = 0.0f; // Linear velocity in x-direction
     private float vz = 0.0f; // Linear velocity in z-direction
